@@ -1,9 +1,10 @@
 var startButton=document.querySelector("#startButton");
-var timerEl=document.getElementById("countdown");
-
+var questions=document.querySelector("#quizQuestions");
+var choices=Array.from(document.querySelectorAll("#question"));
+var timerEl=document.querySelector("#countdown");
 
 startButton.onclick=()=>{
-  quizTimer();
+  quizTimer() 
 }
 
 function quizTimer() {
@@ -20,3 +21,53 @@ function quizTimer() {
   
     }, 1000);
   }
+
+var currentQuestion = {}
+var correctAnswers = true
+var score = 0
+var questionCounter = 0
+var availableQuestions = []
+
+var question = [
+  {
+    question: "I am question 1.",
+    choice1: "I am answer 1",
+    choice2: "I am answer 2",
+    choice3: "I am answer 3",
+    choice4: "I am answer 4",
+    answer: 2,
+  },
+  {
+    question: "I am question 1.",
+    choice1: "I am answer 1",
+    choice2: "I am answer 2",
+    choice3: "I am answer 3",
+    choice4: "I am answer 4",
+    answer: 3,
+  },
+  {
+    question: "I am question 1.",
+    choice1: "I am answer 1",
+    choice2: "I am answer 2",
+    choice3: "I am answer 3",
+    choice4: "I am answer 4",
+    answer: 4,
+  },
+  {
+    question: "I am question 1.",
+    choice1: "I am answer 1",
+    choice2: "I am answer 2",
+    choice3: "I am answer 3",
+    choice4: "I am answer 4",
+    answer: 2,
+  },
+  {
+    question: "I am question 1.",
+    choice1: "I am answer 1",
+    choice2: "I am answer 2",
+    choice3: "I am answer 3",
+    choice4: "I am answer 4",
+    answer: 1,
+  }
+]
+

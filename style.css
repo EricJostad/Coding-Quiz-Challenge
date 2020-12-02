@@ -1,7 +1,11 @@
-h2 {
-    color: red;
-}
-
 body{
     background: lightgray;
+}
+
+/*#quizBox{
+    display: none;
+}*/
+
+.container{
+    align-items: center;
 }
