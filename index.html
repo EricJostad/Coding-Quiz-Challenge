@@ -10,19 +10,42 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">High Scores</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <h3 id="countdown"></h3>
-      </div>
-  </nav>
+<!--Nav bar pulled from Bootstap CDN-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">High Scores</a>
+        <h3 id="countdown"></h3>
+    </div>
+</nav>
 
-  <main class="container">
+  <!--This line holds the start button-->
+  <div class="startButton"><button>Begin Quiz</button></div>
 
-      <h3 id="countdown"></h3>
+  <!--Introduction and instructions section-->
+  <div class="instructionsBox">
+    <div class="instructionsTitle">
+        <span>Coding Quiz Challenge</span>
+    </div>
+    <div class="instructions">
+        <span>
+        Try to answer the following code-related questions within the time given.
+        Keep in mind that incorrect answers will penalize your score & time by ten seconds!
+        </span>
+    </div>
+    <div class="buttons">
+        <button class="exit">Exit Quiz</button>
+        <button class="continue">continue</button>
+    </div>
+  </div>
+
+
+<script src="script.js"></script>
+
+
+<!--Previous code below. Saved for reference, for now.-->
+ <!-- <main class="container">
+
+    <button type="button" class="btn btn-secondary btn-lg" id="startButton">Begin Quiz</button>
+
       <div class="card text-center">
           <div class="card-body">
             <h5 class="card-title">Coding Quiz Challenge</h5>
@@ -30,12 +53,10 @@
               Try to answer the following code-related questions within the time given.
               Keep in mind that incorrect answers will penalize your score & time by ten seconds!
             </p>
-            <button type="button" class="btn btn-secondary btn-lg" id="startButton">Begin Quiz</button>
           </div>
       </div>
-
-        
-    <section class="row quizBox">
+   
+    <section class="row">
       <div class = "col-12" id="quizBox">
         <div id="quizQuestions" class="hide">
           <h5 id="question">I am the first question!</h5>
@@ -47,9 +68,7 @@
       </div>
     </section>
 
-  </main>
+  </main>  -->
 
-    <script src="script.js"></script>
-    
 </body>
 </html>

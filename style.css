@@ -1,18 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background: lightgray;
 }
 
+.startButton,
+.instructionsBox{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);    
+}
 
-.container{
+.startButton button{
+    font-size: 35;
+    font-weight: 400;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: gray;
+    cursor: pointer;
+}
+
+.instructionsBox{
+    width: 500px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.instructionsBox .instructionsTitle{
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px lightgray;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.instructionsBox .instructions{
+    padding: 15px 25px;
+}
+
+.instructionsBox .buttons{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1px lightgray;
+}
+
+.instructionsBox .buttons button{
+    margin: 0 5px;
+    border-radius: 10%;
+    height: 40px;
+    width: 100px;
+    border: 1px;
+    background: darkgray; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Previous code below. Saved for reference, for now.*/
+/* .container{
     align-items: center;
 }
 
-.quizBox{
-    display: none;
+#startButton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.card-body{
-    margin: auto;
-    margin-top: 10%;
-    background-color: none;
+#quizBox{
+    /* display: none; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.cardtext-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
