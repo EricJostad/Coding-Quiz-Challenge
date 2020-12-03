@@ -2,10 +2,17 @@ body{
     background: lightgray;
 }
 
-/*#quizBox{
-    display: none;
-}*/
 
 .container{
     align-items: center;
+}
+
+.quizBox{
+    display: none;
+}
+
+.card-body{
+    margin: auto;
+    margin-top: 10%;
+    background-color: none;
 }
