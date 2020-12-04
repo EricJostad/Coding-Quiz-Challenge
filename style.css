@@ -28,6 +28,7 @@ body{
 }
 
 .instructionsBox{
+    display: none;
     width: 500px;
     background-color: white;
     border-radius: 10px;
