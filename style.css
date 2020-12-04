@@ -79,6 +79,8 @@ body{
 }
 
 .quizBox header{
+    position: relative;
+    z-index: 99;
     height: 65px;
     padding: 0 30px;
     background: white;
@@ -93,6 +95,66 @@ body{
     font-size: 20px;
     font-weight: 500;
     }
+
+.quizBox section{
+    padding: 25px 30px 20px 30px;
+    background: lightgray;
+}
+
+.quizBox section .questionText{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.quizBox section .choicesList{
+    background: darkgray;
+    border: 1px
+}
+
+section .choicesList .choice{
+    background: lightgray;
+    border: 1px;
+    border-radius: 10%;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.quizBox footer{
+    height: 60px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quizBox footer .totalQuestions span{
+    display: flex;
+    user-select: none;
+}
+
+footer .totalQuestions span p{
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+footer .nextQuestion{
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    color: gray;
+    border-radius: 10%;
+    border: 1px;
+    cursor: pointer;
+}
 
 
 
