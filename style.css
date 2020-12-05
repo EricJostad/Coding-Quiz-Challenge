@@ -9,7 +9,6 @@ body{
 }
 
 .startButton,
-.instructionsBox,
 .quizBox{
     position: absolute;
     top: 40%;

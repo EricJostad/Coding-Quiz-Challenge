@@ -1,5 +1,48 @@
+//Necessary DOM elements
+var strtButn = document.querySelector(".startButton");
+var instBox = document.querySelector(".instructionsBox");
+var extBtn = instBox.querySelector(".buttons .exit");
+var cntBtn = document.querySelector(".buttons .continue");
+
+//Question & answer object
+var quizQuestions = [
+    {
+        question: "Which of the following is not a major coding language web development?",
+        choices: ["JavaScript", "CSS", "Mjolnir", "HTML"],
+        answer: 2
+    },
+    {
+        question: "Which of the following does not properly declare a variable?",
+        choices: ["please", "let", "const", "var"],
+        answer: 0
+    },
+    {
+        question: "Which of the following is a usable CDN?",
+        choices: ["Revenant", "Ark", "Scorpion", "Bootstrap"],
+        answer: 3
+    },
+    {
+        question: "Who were the wet bandits?",
+        choices: ["Steve & Jeffrey", "Harry & Marv", "Bill & Ted", "Tom & Harry"],
+        answer: 1
+    },
+    {
+        question: "How would you make a comment in CSS?",
+        choices: ["<!---->", "///", "/**/", "//"],
+        answer: 2
+    },
+    {
+        question: "You finished the Game!",
+        choices: ["High Score: ", "Second Place: ", "Third Place: ", "Fourth Place: "],
+        answer: 0
+    }
+];
 
 
+
+
+
+//Code that initiates when start button is clicked
 
 
 
