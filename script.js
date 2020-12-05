@@ -1,4 +1,4 @@
-//quiz questions and answers
+// Questions & answers object
 var quizQuestions = [
     {
         question: "Welcome to the QUIZ GAME!",
@@ -12,22 +12,22 @@ var quizQuestions = [
     {
         question: "Which of the following does not properly declare a variable?",
         choices: ["please", "let", "const", "var"],
-        answer: 0
+        answer: 1
     },
     {
         question: "Which of the following is a usable CDN?",
         choices: ["Revenant", "Ark", "Scorpion", "Bootstrap"],
-        answer: 3
+        answer: 4
     },
     {
         question: "Who were the wet bandits?",
         choices: ["Steve & Jeffrey", "Harry & Marv", "Bill & Ted", "Tom & Harry"],
-        answer: 1
+        answer: 2
     },
     {
         question: "How would you make a comment in CSS?",
         choices: ["<!---->", "///", "/**/", "//"],
-        answer: 2
+        answer: 3
     },
     {
         question: "You finished the Game!",

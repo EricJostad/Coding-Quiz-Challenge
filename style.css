@@ -1,26 +1,27 @@
 body {
-    background-color: rgb(66, 83, 88);
-    padding: 20px;    
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkgray;
+    padding: 30px;    
+    font-family: Georgia, Times, 'Times New Roman', serif;
 }
 #last-score-button {
-    background-color: rgb(172, 196, 196);
+    background-color: lightgray;
     float: left;
     font-size: 20px;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 5px;
+    box-shadow: 15px 15px 25px black;
 }
 #quiz-area {
     height: 500px;
     width: 500px;
     color:black;
-    background-color: lightblue;
+    background-color: gray;
     font-size: large;
     padding: 20px;
-    width: 800px;
+    width: 700px;
     margin: 0 auto;
     font-weight: bold;
-    border-radius: 25px;
+    border-radius: 10px;
     margin-top: 40px;
     box-shadow: 15px 15px 25px black;
     position: relative;
@@ -30,14 +31,14 @@ body {
     text-align: right;
 }
 #quiz-question {
-    background-color: lightcoral;
+    background-color: lightgray;
     font-size: 30px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 .quiz-answer {
     font-size: medium;
-    background-color: coral;
+    background-color:darkgray;
     font-size: 24px;
     text-align: center;
     width: 80%;
@@ -45,28 +46,29 @@ body {
     box-shadow: 5px 5px 5px black;
 }
 .quiz-answer-correct {
-    box-shadow: 5px 5px 5px rgb(9, 255, 0);
-    color: rgb(9, 255, 0);
+    box-shadow: 5px 5px 5px rgb(238, 238, 238);
+    color: white;
 }
 .quiz-answer-wrong {
     box-shadow: 5px 5px 5px rgb(255, 0, 0);
     color: rgb(255, 0, 0);
 }
 .quiz-answer-highscore {
-    box-shadow: 5px 5px 5px rgb(255, 0, 221);
+    box-shadow: 5px 5px 5px rgb(50, 52, 87);
     color: white;
     background-color: red;
 }
 #game-started-button {
     visibility: visible;
     position: absolute;
+    border-radius: 10px;
     bottom: 20px;
     margin-left: auto;
     margin-left: 20px;
     width: 90%;
     height: 70px;
     font-size: 40px;
-    background-color: coral;
+    background-color: darkgray;
     box-shadow: 5px 5px 5px black;
 }
 #game-start-button {
@@ -78,7 +80,7 @@ body {
     width: 90%;
     height: 200px;
     font-size: 90px;
-    background-color: coral;
+    background-color: darkgray;
     box-shadow: 5px 5px 5px black;
 }
 #user-name-button {
@@ -88,7 +90,7 @@ body {
     right: 10%;
     bottom: 20px;
     font-size: 24px;
-    background-color: lightcoral;    
+    background-color: lightgray;    
     font-weight: bold;
     position: absolute;
 }
@@ -98,7 +100,7 @@ body {
     height: 50px;
     left: 10%;
     bottom: 20px;
-    background-color: lightcoral; 
+    background-color:lightgray; 
     position: absolute;
 }
 #user-name-text {
