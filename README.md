@@ -12,7 +12,8 @@ https://ejostad.github.io/Coding-Quiz-Challenge/
 ![screencapture-file-C-Users-krist-code-Coding-Quiz-Challenge-index-html-2020-12-04-22_02_19](https://user-images.githubusercontent.com/71619046/101235320-ac549100-367c-11eb-819e-35f49416d1b9.png)
 
 
-**IMPORTANT NOTE FROM REPOSITORY OWNER**
+**IMPORTANT NOTE FROM REPOSITORY OWNER**:
+
 This assignment was, by far, one of the most challenging tasks I have ever tried to do. 
 It was not simply testing in sheer knowledge comprehension, but also in confidence, will-power, 
 and (crucially so) time management. 
