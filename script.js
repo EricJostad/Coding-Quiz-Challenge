@@ -1,8 +1,9 @@
 //Necessary DOM elements
-var strtButn = document.querySelector(".startButton");
+var strtBtn = document.querySelector(".startButton");
 var instBox = document.querySelector(".instructionsBox");
 var extBtn = instBox.querySelector(".buttons .exit");
 var cntBtn = document.querySelector(".buttons .continue");
+var timerEl=document.querySelector("#countdown");
 
 //Question & answer object
 var quizQuestions = [
@@ -38,13 +39,29 @@ var quizQuestions = [
     }
 ];
 
-
-
-
-
 //Code that initiates when start button is clicked
 
+strtBtn.addEventListener("click", function(){
 
+    quizTimer()
+    instBox.classList.add(".activeInfo")
+    
+  });
+
+function quizTimer() {
+    var timeLeft=10;
+  
+    var timeInterval=setInterval(function() {
+      timerEl.textContent=timeLeft + " seconds remain";
+      timeLeft--;
+  
+      if (timeLeft===0) {
+        timerEl.textContent= "Time's up!";
+        clearInterval(timeInterval);
+      }
+  
+    }, 1000);
+  }
 
 
 

@@ -34,6 +34,13 @@ body{
     border-radius: 10px;
 }
 
+.instructionsBox.activeInfo{
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
 .instructionsBox .instructionsTitle{
     height: 60px;
     width: 100%;
