@@ -48,8 +48,8 @@ if (localHistory === null) {
     //Default values if no local storage exists
     localHistory = [
         ['Chief', 117],
-        ['Johnny', 90],
-        ['Terry', 50],
+        ['Arbiter', 90],
+        ['Johnson', 89],
         ['Dummy', 0]
     ];
     localStorage.setItem('localHistory', JSON.stringify(localHistory));    
@@ -135,7 +135,7 @@ function preGame() {
     startGamebutton.id = "game-started-button";    
     startGamebutton.innerText = "Click HERE to try again!"
     //Shows user the game rules and sets the pre-game timer        
-    answerResult.textContent = "You will have 60 seconds to answer all the questions in the quiz. The game will begin...";
+    answerResult.textContent = "You will have 75 seconds to answer all the questions in the quiz. The game will begin...";
     timerCounter.textContent = quizStatus.preGametimer;
     //This triggers for the sake of a re-initiation of the game on the same page-load
     for (var i = 0; i < 4; i++) {                
@@ -173,7 +173,7 @@ function preGame() {
 function mainGame () {
     //Each inteval checks game status to refresh question or if game is over.
     var timerGame = setInterval(function() {
-        //Quesiton updator
+        //Question updator
         questionAsked();
         //Updates timer every tick
         timerCounter.textContent--;
@@ -207,7 +207,7 @@ function gameLose(timerGame) {
     //Stops game
     clearInterval(timerGame);
     //Update play area to show high scores and sad alerts
-    quizQuestion.textContent = "You're out of time!"
+    quizQuestion.textContent = "Time's up!"
     answerResult.style.textAlign = "center";
     answerResult.style.fontSize = "40px";
     answerResult.textContent = "Click HERE to try again!";
@@ -258,7 +258,7 @@ function gameWin() {
             answerResult.textContent = "You got a new record!";   
             answerEl = document.getElementById("answer-" + (i + 1));                 
             answerEl.textContent = quizQuestions[6].choices[i] + quizStatus.enteredName + " " + timerCounter.textContent;
-            //Here's that checker to stop this path from happening twice
+            //Here's the checker to stop this path from happening twice
             newRecord++;
             //Logging new record into localHistory
             localHistory[i][0] = quizStatus.enteredName;
@@ -298,10 +298,10 @@ function resetQuizStatus() {
         questionNum: 1,
         questionAsked: false,
         correctAnswer: 1,
-        gameLength: 60,
+        gameLength: 75,
         timerPunishment: 10,
         preGametimer: 5,
-        enteredName: 'your name here'
+        enteredName: 'Enter your name'
     }
 };
 
