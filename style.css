@@ -5,7 +5,7 @@ body {
 }
 #last-score-button {
     background-color: lightgray;
-    float: left;
+    float: right;
     font-size: 20px;
     border-radius: 10px;
     padding: 5px;
@@ -22,13 +22,13 @@ body {
     margin: 0 auto;
     font-weight: bold;
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 100px;
     box-shadow: 15px 15px 25px black;
     position: relative;
 }
 #timer {
     height: 30px;
-    text-align: right;
+    text-align: left;
 }
 #quiz-question {
     background-color: lightgray;
