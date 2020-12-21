@@ -20,6 +20,10 @@ body{
     box-shadow: 10px 10px 10px;
 }
 
+.customBox .hide{
+    display: none;
+}
+
 .instructionsBox h2{
     font-size: 25px;
     color: black;
@@ -61,3 +65,31 @@ body{
     font-size: 16px;
     cursor: pointer;
 }
+
+.quizBox .questionNumber{
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+    line-height: 25px;
+}
+.quizBox .questionText{
+    font-size: 24px;
+    color: black;
+    line-height: 30px;
+    font-weight: 600;
+    padding: 20px 0;
+}
+.quizBox .optionsContainer{}
+.quizBox .optionsContainer .option{
+    background-color: darkgray;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.quizBox .answersIndicator{}
