@@ -47,3 +47,17 @@ body{
 .instructionsBox p span{
     font-weight: 500;
 }
+
+.instructionsBox .btn{
+    margin-top: 20px;
+}
+
+.btn{
+    padding: 15px 45px;
+    background-color: lightgray;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
