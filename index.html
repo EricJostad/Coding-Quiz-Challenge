@@ -1,23 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href ="./style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Challenge Quiz</title>
 </head>
+
 <body>
 
-    <!--Create container which will hold instructions and Begin Quiz button-->
-    <main class="instructionsBox customBox" >
-        <h1>Coding Quiz Challenge</h1>
-        <h2>Instructions:</h2>
-        <h3>Answer as many questions as possible within the time limit, but be careful
-            as incorrect answers will reduce your total time left to complete the quiz;
-            time remaining equals your score. Have fun! 
-        <p>Total number of questions: <span class="totalQuestions">5</span></p>
-        <button type="button" class="btn">Begin Quiz</button>
+    <!--Create container which will hold instructions and quiz sections-->
+    <main>
+
+        <!-- Create box to hld instructions and Begin Quiz button -->
+        <section class="instructionsBox customBox">
+            <h1>Coding Quiz Challenge</h1>
+            <h2>Instructions:</h2>
+            <h3>Answer as many questions as possible within the time limit, but be careful
+                as incorrect answers will reduce your total time left to complete the quiz;
+                time remaining equals your score. Have fun!</h3>
+            <p>Total number of questions: <span class="totalQuestions">5</span></p>
+            <button type="button" class="btn">Begin Quiz</button>
+        </section>
+
+        <!-- Create box which will hold questions and answers, as well as Next button -->
+        <section class="quizBox customBox">
+            <div class="questionNumber">
+                Question 1 of 5
+            </div>
+            <div class="questionText">
+                First question 
+            </div>
+            <div class="optionsContainer">
+                <div class="option">Answer</div>
+                <div class="option">Answer</div>
+                <div class="option">Answer</div>
+                <div class="option">Answer</div>
+                <div class="option">Answer</div>
+            </div>
+            <div class="nextButton">
+                <button type="button" class="btn">Next</button>
+            </div>
+            <div class="answersIndicator">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+        
     </main>
-    
+
 </body>
+
 </html>
