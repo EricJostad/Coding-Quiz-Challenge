@@ -1,7 +1,7 @@
 // Gathering elements that will be needed 
-var questionNumber = document.querySelector("questionNumber");
-var questionText = document.querySelector("questionText");
-var choicesContainer = document.querySelector("choicesContainer");
+var questionNumber = document.querySelector(".questionNumber");
+var questionText = document.querySelector(".questionText");
+var choicesContainer = document.querySelector(".choicesContainer");
 
 // Array of Quiz Questions
 var quiz = [
@@ -39,11 +39,20 @@ var availableQuestions = [];
 // This will push the questions into the AvailableQuestions array
 function setAvailableQuestions(){
     var totalQuestion = quiz.length;
-    for (let i = 0; i < totalQuestion; i++) {
+    for (var i = 0; i < totalQuestion; i++) {
         availableQuestions.push(quiz[i])
     }
 }
 
+// This will set the question number & question options
+function getNewQuestion(){
+    // This will set the question number
+    questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + quiz.length;
+}
+
 window.onload = function(){
+    // This will set all questions in availableQuestions Array
     setAvailableQuestions();
+    // Next, this calls the getNewQuestion(); function
+    getNewQuestion();
 }
