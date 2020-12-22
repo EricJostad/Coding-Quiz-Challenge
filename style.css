@@ -113,3 +113,37 @@ body{
 .quizBox .btn{
     margin:15px 0;
 }
+
+.resultBox{
+    text-align: center;
+}
+
+/* .resultBox.hide{
+    display: none;
+} */
+
+.resultBox h1{
+    font-size: 36px;
+    line-height: 42px;
+    color: white;
+}
+
+.resultBox table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+.resultBox table td{
+    border: 1px solid black;
+    padding: 8px 15px;
+    font-weight: 500;
+    color: white;
+    width: 50%; 
+    text-align: left;
+    font-size: 20px;
+}
+
+.resultBox .btn{
+    margin-right: 25px;
+}
