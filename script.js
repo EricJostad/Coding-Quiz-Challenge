@@ -32,3 +32,18 @@ var quiz = [
     },
 ]
 
+var questionCounter = 0;
+var currentQuestion; 
+var availableQuestions = [];
+
+// This will push the questions into the AvailableQuestions array
+function setAvailableQuestions(){
+    var totalQuestion = quiz.length;
+    for (let i = 0; i < totalQuestion; i++) {
+        availableQuestions.push(quiz[i])
+    }
+}
+
+window.onload = function(){
+    setAvailableQuestions();
+}
