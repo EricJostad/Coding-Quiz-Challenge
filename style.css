@@ -20,6 +20,13 @@ body{
     box-shadow: 10px 10px 10px;
 }
 
+.customBox::before,
+.customBox::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
 /* .customBox.hide{
     display: none;
 } */
@@ -67,6 +74,14 @@ body{
     display: inline-block;
 }
 
+.quizBox .questionNumber,
+.quizBox .questionText,
+.quizBox .optionsContainer,
+.quizBox .nextButton{
+    width: 100%;
+    float: left;
+}
+
 .quizBox .questionNumber{
     font-size: 18px;
     color: black;
@@ -82,7 +97,7 @@ body{
     font-weight: 600;
     padding: 20px 0;
 }
-.quizBox .optionsContainer{}
+
 .quizBox .optionsContainer .option{
     background-color: darkgray;
     padding: 15px;
@@ -92,6 +107,7 @@ body{
     border-radius: 10px;
     margin-bottom: 10px;
     cursor: pointer;
+    text-transform: capitalize;
 }
 
 .quizBox .btn{
