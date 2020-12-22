@@ -1,3 +1,8 @@
+// Gathering elements that will be needed 
+var questionNumber = document.querySelector("questionNumber");
+var questionText = document.querySelector("questionText");
+var choicesContainer = document.querySelector("choicesContainer");
+
 // Array of Quiz Questions
 var quiz = [
     {
@@ -26,3 +31,4 @@ var quiz = [
         answer: 4
     },
 ]
+
