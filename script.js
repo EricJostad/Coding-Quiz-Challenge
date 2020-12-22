@@ -53,6 +53,13 @@ function getNewQuestion(){
     var questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
     currentQuestion = questionIndex;
     questionText.innerHTML = currentQuestion.question;
+
+    // This line will get the position of "questionIndex" from the availableQuestions array
+    var index1 = availableQuestions.indexOf(questionIndex);
+
+    // This will be responsible for removing "questionIndex" from the availableQuestion Array
+    // to avoid repeating questions
+    availableQuestions.splice(index1,1);
     questionCounter++
 }
 
