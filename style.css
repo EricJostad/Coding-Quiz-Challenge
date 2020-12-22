@@ -76,7 +76,7 @@ body{
 
 .quizBox .questionNumber,
 .quizBox .questionText,
-.quizBox .optionsContainer,
+.quizBox .choicesContainer,
 .quizBox .nextButton{
     width: 100%;
     float: left;
@@ -98,7 +98,7 @@ body{
     padding: 20px 0;
 }
 
-.quizBox .optionsContainer .option{
+.quizBox .choicesContainer .choice{
     background-color: darkgray;
     padding: 15px;
     font-size: 16px;
