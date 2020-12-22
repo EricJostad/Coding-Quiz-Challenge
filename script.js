@@ -56,6 +56,14 @@ function getNewQuestion(){
     questionCounter++
 }
 
+document.getElementById("nextBtn").addEventListener("click", function nextBtn(){
+    if(questionCounter === quiz.length){
+        alert("End of Quiz");
+    } else {
+        getNewQuestion();
+    }
+})
+
 window.onload = function(){
     // This will set all questions in availableQuestions Array
     setAvailableQuestions();
