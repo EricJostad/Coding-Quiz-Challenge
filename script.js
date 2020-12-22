@@ -48,6 +48,12 @@ function setAvailableQuestions(){
 function getNewQuestion(){
     // This will set the question number
     questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + quiz.length;
+
+    // This line will set the question text and grab a random question
+    var questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
+    currentQuestion = questionIndex;
+    questionText.innerHTML = currentQuestion.question;
+    questionCounter++
 }
 
 window.onload = function(){
