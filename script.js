@@ -35,6 +35,7 @@ var quiz = [
 var questionCounter = 0;
 var currentQuestion; 
 var availableQuestions = [];
+var availableChoices = [];
 
 // This will push the questions into the AvailableQuestions array
 function setAvailableQuestions(){
@@ -44,7 +45,7 @@ function setAvailableQuestions(){
     }
 }
 
-// This will set the question number & question options
+// This will set the question number & question choices
 function getNewQuestion(){
     // This will set the question number
     questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + quiz.length;
@@ -60,9 +61,28 @@ function getNewQuestion(){
     // This will be responsible for removing "questionIndex" from the availableQuestion Array
     // to avoid repeating questions
     availableQuestions.splice(index1,1);
+
+    // This line will set & get the length of answer choices
+    var choiceLength = currentQuestion.choices.length
+
+    // This will push answer choices into the availableChoices Array
+    for (var i = 0; i < choiceLength; i++) {
+       availableChoices.push(i)
+    }
+
+    // Append choices from quiz array of objects to html
+    for (var i = 0; i < choiceLength; i++) {
+     var choice = document.createElement("div");
+     choice.innerHTML = currentQuestion.choices[i];
+     choice.id = i;
+     choice.className = "choice";
+     choicesContainer.appendChild(choice)
+    }
+    
     questionCounter++
 }
 
+// Allows the Next button to function as intended and cycle through random questions until exhausted
 document.getElementById("nextBtn").addEventListener("click", function nextBtn(){
     if(questionCounter === quiz.length){
         alert("End of Quiz");
