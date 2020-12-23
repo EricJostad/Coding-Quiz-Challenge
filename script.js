@@ -86,9 +86,19 @@ function getNewQuestion(){
      choice.id = choiceIndex;
      choice.className = "choice";
      choicesContainer.appendChild(choice)
+     choice.setAttribute("onclick", "getResult(this)");
     }
     
     questionCounter++
+}
+// This function is responsible for marking the answer as correct or incorrect
+function getResult(choiceEl){
+   var id = parseInt(choiceEl.id);
+   if(id === currentQuestion.answer){
+       console.log("correct");
+   } else{
+       console.log("incorrect");
+   }
 }
 
 // Allows the Next button to function as intended and cycle through random questions until exhausted
