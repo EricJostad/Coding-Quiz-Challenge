@@ -72,9 +72,18 @@ function getNewQuestion(){
 
     // Append choices from quiz array of objects to html
     for (var i = 0; i < choiceLength; i++) {
-     var choice = document.createElement("div");
-     choice.innerHTML = currentQuestion.choices[i];
-     choice.id = i;
+
+    // Will get a random choice and get the positions of choiceIndex from availableOptions
+    var choiceIndex = availableChoices[Math.floor(Math.random() * availableChoices.length)]
+    var index2 = availableChoices.indexOf(choiceIndex);
+    
+    // This will be responsible for removing "choiceIndex" from the availableChoices
+    // so that the choice does not repeat 
+    availableChoices.splice(index2,1);
+
+    var choice = document.createElement("div");
+     choice.innerHTML = currentQuestion.choices[choiceIndex];
+     choice.id = choiceIndex;
      choice.className = "choice";
      choicesContainer.appendChild(choice)
     }
