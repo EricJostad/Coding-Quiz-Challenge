@@ -6,28 +6,28 @@ var choicesContainer = document.querySelector(".choicesContainer");
 // Array of Quiz Questions
 var quiz = [
     {
-        question: "Question 1",
-        choices: ["Answer 1", "Answer 2", "Answer 3", "Answer 4", "Answer 5"],
-        answer: 0
-    },
-    {
-        question: "Question 2",
-        choices: ["Answer 1", "Answer 2", "Answer 3", "Answer 4", "Answer 5"],
+        question: "Which of the following is not a common web development programming language?",
+        choices: ["HTML", "Mjolnir", "JavaScript", "CSS"],
         answer: 1
     },
     {
-        question: "Question 3",
-        choices: ["Answer 1", "Answer 2", "Answer 3", "Answer 4", "Answer 5"],
-        answer: 2
+        question: "Of the following, which is not a common data-type in JavaScript?",
+        choices: ["Hooligan", "Boolean", "Number", "String"],
+        answer: 0
     },
     {
-        question: "Question 4",
-        choices: ["Answer 1", "Answer 2", "Answer 3", "Answer 4", "Answer 5"],
+        question: "In which decade was the first computer code ever written?",
+        choices: ["1940's", "1980's", "1970's", "1950's", "1960's"],
         answer: 3
     },
     {
-        question: "Question 5",
-        choices: ["Answer 1", "Answer 2", "Answer 3", "Answer 4", "Answer 5"],
+        question: "Which of the following is an example of an Array structure?",
+        choices: ["var = {}", "var = ()", "var = []", "var = ||"],
+        answer: 2
+    },
+    {
+        question: "What was the name of the planet that the Death Star destroyed in StarWars: A New Hope?",
+        choices: ["Coruscant", "Taris", "Tatooine", "Dantooine", "Alderaan"],
         answer: 4
     },
 ]
