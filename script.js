@@ -104,6 +104,16 @@ function getResult(choiceEl){
    } else{
        console.log("incorrect");
    }
+
+   oneChoice();
+}
+
+// This function will make all other choices unclickable ater the user has selected an answer
+function oneChoice(){
+    var choiceLength = choicesContainer.children.length;
+    for (var i = 0; i < choiceLength; i++) {
+        choicesContainer.children[i].classList.add("answered");
+    }
 }
 
 // Allows the Next button to function as intended and cycle through random questions until exhausted

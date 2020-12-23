@@ -114,6 +114,10 @@ body{
     margin:15px 0;
 }
 
+.quizBox .choicesContainer .choice.answered{
+    pointer-events: none;
+}
+
 .resultBox{
     text-align: center;
 }
