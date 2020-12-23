@@ -46,11 +46,11 @@ function quizTimer() {
         timerEl.textContent = timeLeft + " seconds remain";
         timeLeft--;
 
+        // This code will stop the timer and display the "Time's Up!" message upon reaching 0
         if (timeLeft === 0) {
             timerEl.textContent = "Time's up!";
             clearInterval(timeInterval);
         }
-
     }, 1000);
 }
 
