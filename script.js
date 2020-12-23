@@ -2,6 +2,8 @@
 var questionNumber = document.querySelector(".questionNumber");
 var questionText = document.querySelector(".questionText");
 var choicesContainer = document.querySelector(".choicesContainer");
+var beginButton = document.querySelector("#beginBtn");
+var timerEl = document.querySelector("#countdown");
 
 // Array of Quiz Questions
 var quiz = [
@@ -32,13 +34,33 @@ var quiz = [
     },
 ]
 
+// This line allows the countdown timer to initiate when the user clicks the Begin Quiz button
+beginButton.onclick = () => {
+    quizTimer();
+}
+
+// This function allows the countdown timer to start at a set time and decrement 1 every second until 0, then will display "Time's Up!"
+function quizTimer() {
+    var timeLeft = 60;
+    var timeInterval = setInterval(function () {
+        timerEl.textContent = timeLeft + " seconds remain";
+        timeLeft--;
+
+        if (timeLeft === 0) {
+            timerEl.textContent = "Time's up!";
+            clearInterval(timeInterval);
+        }
+
+    }, 1000);
+}
+
 var questionCounter = 0;
-var currentQuestion; 
+var currentQuestion;
 var availableQuestions = [];
 var availableChoices = [];
 
 // This will push the questions into the AvailableQuestions array
-function setAvailableQuestions(){
+function setAvailableQuestions() {
     var totalQuestion = quiz.length;
     for (var i = 0; i < totalQuestion; i++) {
         availableQuestions.push(quiz[i])
@@ -46,7 +68,7 @@ function setAvailableQuestions(){
 }
 
 // This will set the question number & question choices
-function getNewQuestion(){
+function getNewQuestion() {
     // This will set the question number
     questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + quiz.length;
 
@@ -60,14 +82,14 @@ function getNewQuestion(){
 
     // This will be responsible for removing "questionIndex" from the availableQuestion Array
     // to avoid repeating questions
-    availableQuestions.splice(index1,1);
+    availableQuestions.splice(index1, 1);
 
     // This line will set & get the length of answer choices
     var choiceLength = currentQuestion.choices.length
 
     // This will push answer choices into the availableChoices Array
     for (var i = 0; i < choiceLength; i++) {
-       availableChoices.push(i)
+        availableChoices.push(i)
     }
 
     // This line pushes the quizBox forward to the next question upon clicking the Next button
@@ -76,40 +98,40 @@ function getNewQuestion(){
     // Append choices from quiz array of objects to html
     for (var i = 0; i < choiceLength; i++) {
 
-    // Will get a random choice and get the positions of choiceIndex from availableOptions
-    var choiceIndex = availableChoices[Math.floor(Math.random() * availableChoices.length)]
-    var index2 = availableChoices.indexOf(choiceIndex);
-    
-    // This will be responsible for removing "choiceIndex" from the availableChoices
-    // so that the choice does not repeat 
-    availableChoices.splice(index2,1);
+        // Will get a random choice and get the positions of choiceIndex from availableOptions
+        var choiceIndex = availableChoices[Math.floor(Math.random() * availableChoices.length)]
+        var index2 = availableChoices.indexOf(choiceIndex);
 
-    var choice = document.createElement("div");
-     choice.innerHTML = currentQuestion.choices[choiceIndex];
-     choice.id = choiceIndex;
-     choice.className = "choice";
-     choicesContainer.appendChild(choice)
-     choice.setAttribute("onclick", "getResult(this)");
+        // This will be responsible for removing "choiceIndex" from the availableChoices
+        // so that the choice does not repeat 
+        availableChoices.splice(index2, 1);
+
+        var choice = document.createElement("div");
+        choice.innerHTML = currentQuestion.choices[choiceIndex];
+        choice.id = choiceIndex;
+        choice.className = "choice";
+        choicesContainer.appendChild(choice)
+        choice.setAttribute("onclick", "getResult(this)");
     }
-    
+
     questionCounter++
 }
 // This function is responsible for marking the answer as correct or incorrect
-function getResult(choiceEl){
-   var id = parseInt(choiceEl.id);
+function getResult(choiceEl) {
+    var id = parseInt(choiceEl.id);
 
     // The function compares the id of the clicked choice to the answer key in the quiz array    
-   if(id === currentQuestion.answer){
-       console.log("correct");
-   } else{
-       console.log("incorrect");
-   }
+    if (id === currentQuestion.answer) {
+        console.log("correct");
+    } else {
+        console.log("incorrect");
+    }
 
-   oneChoice();
+    oneChoice();
 }
 
 // This function will make all other choices unclickable ater the user has selected an answer
-function oneChoice(){
+function oneChoice() {
     var choiceLength = choicesContainer.children.length;
     for (var i = 0; i < choiceLength; i++) {
         choicesContainer.children[i].classList.add("answered");
@@ -117,15 +139,15 @@ function oneChoice(){
 }
 
 // Allows the Next button to function as intended and cycle through random questions until exhausted
-document.getElementById("nextBtn").addEventListener("click", function nextBtn(){
-    if(questionCounter === quiz.length){
+document.getElementById("nextBtn").addEventListener("click", function nextBtn() {
+    if (questionCounter === quiz.length) {
         alert("End of Quiz");
     } else {
         getNewQuestion();
     }
 })
 
-window.onload = function(){
+window.onload = function () {
     // This will set all questions in availableQuestions Array
     setAvailableQuestions();
     // Next, this calls the getNewQuestion(); function

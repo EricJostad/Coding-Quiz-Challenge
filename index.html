@@ -13,7 +13,12 @@
     <!--Create container which will hold instructions and quiz sections-->
     <main>
 
-        <!-- Create box to hld instructions and Begin Quiz button -->
+        <!-- Create box to hold the quiz timer -->
+        <header>
+            <h2 id="countdown"></h2>
+        </header>
+
+        <!-- Create box to hold instructions and Begin Quiz button -->
         <section class="instructionsBox customBox">
             <h1>Coding Quiz Challenge</h1>
             <h2>Instructions:</h2>
@@ -21,7 +26,7 @@
                 as incorrect answers will reduce your total time left to complete the quiz;
                 time remaining equals your score. Have fun!</h3>
             <p>Total number of questions: <span class="totalQuestions">5</span></p>
-            <button type="button" class="btn">Begin Quiz</button>
+            <button type="button" class="btn" id="beginBtn">Begin Quiz</button>
         </section>
 
         <!-- Create box which will hold questions and answers, as well as Next button -->
