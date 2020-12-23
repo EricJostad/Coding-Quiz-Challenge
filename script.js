@@ -70,6 +70,9 @@ function getNewQuestion(){
        availableChoices.push(i)
     }
 
+    // This line pushes the quizBox forward to the next question upon clicking the Next button
+    choicesContainer.innerHTML = "";
+
     // Append choices from quiz array of objects to html
     for (var i = 0; i < choiceLength; i++) {
 
@@ -94,6 +97,8 @@ function getNewQuestion(){
 // This function is responsible for marking the answer as correct or incorrect
 function getResult(choiceEl){
    var id = parseInt(choiceEl.id);
+
+    // The function compares the id of the clicked choice to the answer key in the quiz array    
    if(id === currentQuestion.answer){
        console.log("correct");
    } else{
