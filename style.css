@@ -26,6 +26,10 @@ body{
     line-height: 20px;
 }
 
+/* .timerBox.hide{
+    display: none;
+} */
+
 .customBox{
     max-width: 650px;
     background-color: gray;
@@ -165,4 +169,16 @@ body{
 
 .resultBox .btn{
     margin-right: 25px;
+}
+
+.footer {
+    padding: 5px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    position: fixed;
+    background-color: darkgray;
 }
