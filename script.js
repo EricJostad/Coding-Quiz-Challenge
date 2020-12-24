@@ -64,6 +64,7 @@ function quizTimer() {
     }, 1000);
 }
 
+// This function is responsible for hiding the instructionsBox and showing the quizBox/Timer when the user clicks on begin Quiz
 document.getElementById("beginBtn").addEventListener("click", function beginBtn() {
         instructBox.classList.add("hide");
         quizBox.classList.remove("hide");
@@ -157,6 +158,8 @@ document.getElementById("nextBtn").addEventListener("click", function nextBtn() 
     } else {
         getNewQuestion();
     }
+
+    // This function is responsible for hiding the quizBox/Timer and showing the scoreBox upon quiz completion
     function endQuiz(){
         quizBox.classList.add("hide");
         timerBox.classList.add("hide");

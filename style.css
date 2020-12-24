@@ -83,6 +83,11 @@ body{
     margin-top: 20px;
 }
 
+.instructionsBox .btn #hsBtn{
+    margin-top: 20px;
+    align-items: right;
+}
+
 .btn{
     padding: 15px 45px;
     background-color: lightgray;
