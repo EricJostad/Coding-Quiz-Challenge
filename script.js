@@ -4,6 +4,16 @@ var questionText = document.querySelector(".questionText");
 var choicesContainer = document.querySelector(".choicesContainer");
 var beginButton = document.querySelector("#beginBtn");
 var timerEl = document.querySelector("#countdown");
+var instructBox = document.querySelector(".instructionsBox");
+var quizBox = document.querySelector(".quizBox");
+var scoreBox = document.querySelector(".scoreBox");
+var timerBox = document.querySelector(".timerBox");
+
+// Declaring variables that will be used further down in script
+var questionCounter = 0;
+var currentQuestion;
+var availableQuestions = [];
+var availableChoices = [];
 
 // Array of Quiz Questions
 var quiz = [
@@ -46,18 +56,20 @@ function quizTimer() {
         timerEl.textContent = timeLeft + " seconds remain";
         timeLeft--;
 
-        // This code will stop the timer and display the "Time's Up!" message upon reaching 0
-        if (timeLeft === 0) {
-            timerEl.textContent = "Time's up!";
-            clearInterval(timeInterval);
+    // This code will stop the timer and display the "Time's Up!" message upon reaching 0
+    if (timeLeft === 0) {
+        timerEl.textContent = "Time's up!";
+        clearInterval(timeInterval);
         }
     }, 1000);
 }
 
-var questionCounter = 0;
-var currentQuestion;
-var availableQuestions = [];
-var availableChoices = [];
+document.getElementById("beginBtn").addEventListener("click", function beginBtn() {
+        instructBox.classList.add("hide");
+        quizBox.classList.remove("hide");
+        timerBox.classList.remove("hide");
+    }
+);
 
 // This will push the questions into the AvailableQuestions array
 function setAvailableQuestions() {
@@ -141,11 +153,16 @@ function oneChoice() {
 // Allows the Next button to function as intended and cycle through random questions until exhausted
 document.getElementById("nextBtn").addEventListener("click", function nextBtn() {
     if (questionCounter === quiz.length) {
-        alert("End of Quiz");
+        endQuiz();
     } else {
         getNewQuestion();
     }
-})
+    function endQuiz(){
+        quizBox.classList.add("hide");
+        timerBox.classList.add("hide");
+        scoreBox.classList.remove("hide");
+    }
+});
 
 window.onload = function () {
     // This will set all questions in availableQuestions Array
