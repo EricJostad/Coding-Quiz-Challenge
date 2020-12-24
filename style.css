@@ -94,6 +94,36 @@ body{
     display: inline-block;
 }
 
+.hsBox{
+    text-align: center;
+}
+
+.hsBox.hide{
+    display: none;
+}
+
+.hsBox h1{
+    font-size: 36px;
+    line-height: 42px;
+    color: black;
+}
+
+.hsBox table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+.hsBox table td{
+    border: 1px solid black;
+    padding: 8px 15px;
+    font-weight: 500;
+    color: white;
+    width: 50%; 
+    text-align: left;
+    font-size: 20px;
+}
+
 .quizBox .questionNumber,
 .quizBox .questionText,
 .quizBox .choicesContainer,

@@ -5,6 +5,7 @@ var choicesContainer = document.querySelector(".choicesContainer");
 var beginButton = document.querySelector("#beginBtn");
 var timerEl = document.querySelector("#countdown");
 var instructBox = document.querySelector(".instructionsBox");
+var hsBox = document.querySelector(".hsBox");
 var quizBox = document.querySelector(".quizBox");
 var scoreBox = document.querySelector(".scoreBox");
 var timerBox = document.querySelector(".timerBox");
@@ -65,6 +66,13 @@ function quizTimer() {
         }
     }, 1000);
 }
+
+// This function is responsible for hiding the instructionsBox and showing the quizBox/Timer when the user clicks on begin Quiz
+document.getElementById("hsBtn").addEventListener("click", function hsBtn() {
+    instructBox.classList.add("hide");
+    hsBox.classList.remove("hide");
+}
+);
 
 // This function is responsible for hiding the instructionsBox and showing the quizBox/Timer when the user clicks on begin Quiz
 document.getElementById("beginBtn").addEventListener("click", function beginBtn() {
