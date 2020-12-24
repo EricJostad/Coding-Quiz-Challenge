@@ -15,7 +15,7 @@ body{
 .timerBox{
     max-width: 200px;
     background-color: gray;
-    margin: 10px auto;
+    margin: 25px auto;
     padding: 5px;
     border-radius: 5px;
     box-shadow: 10px 10px 10px;
@@ -81,11 +81,6 @@ body{
 
 .instructionsBox .btn{
     margin-top: 20px;
-}
-
-.instructionsBox .btn #hsBtn{
-    margin-top: 20px;
-    align-items: right;
 }
 
 .btn{
@@ -177,7 +172,17 @@ body{
     margin-right: 25px;
 }
 
-.footer {
+.header{
+    padding: 10px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    clear: both;
+    position: fixed;
+    background-color: darkgray;
+}
+
+.footer{
     padding: 5px;
     left: 0;
     bottom: 0;
