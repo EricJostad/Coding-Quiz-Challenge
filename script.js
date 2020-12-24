@@ -11,6 +11,8 @@ var timerBox = document.querySelector(".timerBox");
 
 // Declaring variables that will be used further down in script
 var questionCounter = 0;
+// var correctAnswers = 0;
+// var attempted = 0;
 var currentQuestion;
 var availableQuestions = [];
 var availableChoices = [];
@@ -136,10 +138,14 @@ function getResult(choiceEl) {
     // The function compares the id of the clicked choice to the answer key in the quiz array    
     if (id === currentQuestion.answer) {
         console.log("correct");
+        // correctAnswers++;
+    
+    // Else statement to subtract 10 seconds from timer when wrong answer chosen
     } else {
         console.log("incorrect");
+        // attempted++;
+        // quizTimer = timeLeft - 10;
     }
-
     oneChoice();
 }
 
@@ -167,9 +173,31 @@ document.getElementById("nextBtn").addEventListener("click", function nextBtn() 
     }
 });
 
+function resetQuiz(){
+    questionCounter = 0;
+}
+
+// This function will allow the user to reset the quiz without refreshing the page
+function restart(){
+    scoreBox.classList.add("hide");
+    quizBox.classList.remove("hide");
+    resetQuiz();
+}
+
 window.onload = function () {
     // This will set all questions in availableQuestions Array
     setAvailableQuestions();
     // Next, this calls the getNewQuestion(); function
     getNewQuestion();
 }
+
+// Commented out below due to code not working as intended. Will circle back at a later date.
+// The below function will pull user quiz data into score table 
+// function quizResult(){
+//     scoreBox.querySelector(".totalQuestion").innerHTML = quiz.length;
+//     scoreBox.querySelector(".totalAttempt").innerHTML = attempted;
+//     scoreBox.querySelector(".totalRight").innerHTML = correctAnswers;
+//     scoreBox.querySelector(".totalWrong").innerHTML = attempted - correctAnswers;
+//     scoreBox.querySelector(".timeRemain").innerHTML = quizTimer;
+//     scoreBox.querySelector(".totalScore").innerHTML = correctAnswers + timeLeft;
+// }
