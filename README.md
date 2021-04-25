@@ -15,7 +15,7 @@ If the user runs out of time organically, or causes the timer to hit zero due to
 will receive a "Times up!" message and be invited to try again.
 
 ## Main Page
-https://ejostad.github.io/Coding-Quiz-Challenge/
+https://ericjostad.github.io/Coding-Quiz-Challenge/
 ![screencapture-file-C-Users-krist-code-Coding-Quiz-Challenge-index-html-2020-12-23-22_02_21](https://user-images.githubusercontent.com/71619046/103065107-98f56100-456a-11eb-9d26-a98a15dd20f4.png)
 
 ## Technologies
