@@ -26,7 +26,7 @@ This project is created with:
 
 ## Updates planned
 - Work-out and deploy solution which will decrement time by 10 seconds when the user selects the incorrect answer.
-- Work-out the kinks in the function that calculates the user score.
+- Locate bugs and squash bug(s) that is/are preventing the user score from caculating. 
 - Create code to allow the user to save their score and then append that score to the High Scores area using local storage. 
 - Add visible indicators, such as color, when user selects right or wrong answer. 
 

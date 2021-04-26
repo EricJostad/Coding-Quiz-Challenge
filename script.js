@@ -67,14 +67,6 @@ function quizTimer() {
     }, 1000);
 }
 
-function startQuiz(){
-    scoreBox.classList.add("hide");
-    quizBox.classList.remove("hide");
-
-    setAvailableQuestions();
-    getNewQuestion();
-}
-
 // This function is responsible for hiding the instructionsBox and showing the quizBox/Timer when the user clicks on begin Quiz
 document.getElementById("hsBtn").addEventListener("click", function hsBtn() {
     instructBox.classList.add("hide");
@@ -89,6 +81,14 @@ document.getElementById("beginBtn").addEventListener("click", function beginBtn(
     timerBox.classList.remove("hide");
 }
 );
+
+function startQuiz(){
+    scoreBox.classList.add("hide");
+    quizBox.classList.remove("hide");
+
+    setAvailableQuestions();
+    getNewQuestion();
+}
 
 // This will push the questions into the AvailableQuestions array
 function setAvailableQuestions() {
@@ -201,6 +201,13 @@ function restart() {
     quizBox.classList.remove("hide");
     resetQuiz();
     startQuiz();
+}
+
+// This function will allow the user to go to the main quiz page without refreshing the page
+function home(){
+    scoreBox.classList.add("hide");
+    instructBox .classList.remove("hide");
+    resetQuiz();
 }
 
 // Commented out below due to code not working as intended. Will circle back at a later date.
