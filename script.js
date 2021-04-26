@@ -206,6 +206,7 @@ function restart() {
 // This function will allow the user to go to the main quiz page without refreshing the page
 function home(){
     scoreBox.classList.add("hide");
+    quizBox.classList.add("hide");
     instructBox .classList.remove("hide");
     resetQuiz();
 }
