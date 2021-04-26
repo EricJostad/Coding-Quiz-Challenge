@@ -84,6 +84,7 @@ document.getElementById("beginBtn").addEventListener("click", function beginBtn(
 
 function startQuiz(){
     scoreBox.classList.add("hide");
+    hsBox.classList.add("hide");
     quizBox.classList.remove("hide");
 
     setAvailableQuestions();
@@ -207,6 +208,7 @@ function restart() {
 function home(){
     scoreBox.classList.add("hide");
     quizBox.classList.add("hide");
+    hsBox.classList.add("hide");
     instructBox .classList.remove("hide");
     resetQuiz();
 }
