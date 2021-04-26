@@ -12,8 +12,8 @@ var timerBox = document.querySelector(".timerBox");
 
 // Declaring variables that will be used further down in script
 var questionCounter = 0;
-// var correctAnswers = 0;
-// var attempted = 0;
+var correctAnswers = 0;
+var attempted = 0;
 var currentQuestion;
 var availableQuestions = [];
 var availableChoices = [];
@@ -59,12 +59,20 @@ function quizTimer() {
         timerEl.textContent = timeLeft + " seconds remain";
         timeLeft--;
 
-    // This code will stop the timer and display the "Time's Up!" message upon reaching 0
-    if (timeLeft === 0) {
-        timerEl.textContent = "Time's up!";
-        clearInterval(timeInterval);
+        // This code will stop the timer and display the "Time's Up!" message upon reaching 0
+        if (timeLeft === 0) {
+            timerEl.textContent = "Time's up!";
+            clearInterval(timeInterval);
         }
     }, 1000);
+}
+
+function startQuiz(){
+    scoreBox.classList.add("hide");
+    quizBox.classList.remove("hide");
+
+    setAvailableQuestions();
+    getNewQuestion();
 }
 
 // This function is responsible for hiding the instructionsBox and showing the quizBox/Timer when the user clicks on begin Quiz
@@ -76,10 +84,10 @@ document.getElementById("hsBtn").addEventListener("click", function hsBtn() {
 
 // This function is responsible for hiding the instructionsBox and showing the quizBox/Timer when the user clicks on begin Quiz
 document.getElementById("beginBtn").addEventListener("click", function beginBtn() {
-        instructBox.classList.add("hide");
-        quizBox.classList.remove("hide");
-        timerBox.classList.remove("hide");
-    }
+    instructBox.classList.add("hide");
+    quizBox.classList.remove("hide");
+    timerBox.classList.remove("hide");
+}
 );
 
 // This will push the questions into the AvailableQuestions array
@@ -146,13 +154,13 @@ function getResult(choiceEl) {
     // The function compares the id of the clicked choice to the answer key in the quiz array    
     if (id === currentQuestion.answer) {
         console.log("correct");
-        // correctAnswers++;
-    
-    // Else statement to subtract 10 seconds from timer when wrong answer chosen
+        correctAnswers++;
+
+        // Else statement to subtract 10 seconds from timer when wrong answer chosen
     } else {
         console.log("incorrect");
-        // attempted++;
-        // quizTimer = timeLeft - 10;
+        attempted++;
+        quizTimer = timeLeft - 10;
     }
     oneChoice();
 }
@@ -174,22 +182,36 @@ document.getElementById("nextBtn").addEventListener("click", function nextBtn() 
     }
 
     // This function is responsible for hiding the quizBox/Timer and showing the scoreBox upon quiz completion
-    function endQuiz(){
+    function endQuiz() {
         quizBox.classList.add("hide");
         timerBox.classList.add("hide");
         scoreBox.classList.remove("hide");
     }
 });
 
-function resetQuiz(){
+function resetQuiz() {
     questionCounter = 0;
+    correctAnswers = 0;
+    attempted = 0;
 }
 
 // This function will allow the user to reset the quiz without refreshing the page
-function restart(){
+function restart() {
     scoreBox.classList.add("hide");
     quizBox.classList.remove("hide");
     resetQuiz();
+    startQuiz();
+}
+
+// Commented out below due to code not working as intended. Will circle back at a later date.
+// The below function will pull user quiz data into score table 
+function quizResult(){
+    scoreBox.querySelector(".totalQuestion").innerHTML = quiz.length;
+    scoreBox.querySelector(".totalAttempt").innerHTML = attempted;
+    scoreBox.querySelector(".totalRight").innerHTML = correctAnswers;
+    scoreBox.querySelector(".totalWrong").innerHTML = attempted - correctAnswers;
+    scoreBox.querySelector(".timeRemain").innerHTML = quizTimer;
+    scoreBox.querySelector(".totalScore").innerHTML = correctAnswers + timeLeft;
 }
 
 window.onload = function () {
@@ -198,14 +220,3 @@ window.onload = function () {
     // Next, this calls the getNewQuestion(); function
     getNewQuestion();
 }
-
-// Commented out below due to code not working as intended. Will circle back at a later date.
-// The below function will pull user quiz data into score table 
-// function quizResult(){
-//     scoreBox.querySelector(".totalQuestion").innerHTML = quiz.length;
-//     scoreBox.querySelector(".totalAttempt").innerHTML = attempted;
-//     scoreBox.querySelector(".totalRight").innerHTML = correctAnswers;
-//     scoreBox.querySelector(".totalWrong").innerHTML = attempted - correctAnswers;
-//     scoreBox.querySelector(".timeRemain").innerHTML = quizTimer;
-//     scoreBox.querySelector(".totalScore").innerHTML = correctAnswers + timeLeft;
-// }
