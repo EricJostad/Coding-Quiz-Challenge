@@ -26,9 +26,9 @@ This project is created with:
 
 ## Updates planned
 - Locate bugs and squash bug(s) that is/are preventing the timeLeft function from correctly deprecating the time left by 10 seconds for every wrong answer. 
-- Locate bugs and squash bug(s) that is/are preventing the user score from caculating. 
+- Locate bugs and destroy bug(s) that is/are preventing the user score from caculating. 
+- Locate and obliterate bug(s) that are/is preventing the incorrect anwers from reliably turning red and console logging "incorrect" when chosen; current status is intermittent functionality
 - Create code to allow the user to save their score and then append that score to the High Scores area using local storage. 
-- Add visible indicators, such as color, when user selects right or wrong answer. 
 
 ## Outside resources
 This project was used with the knowledge gained from my boot camp, my previous assignments, and a helpful YouTube guid for the overall quiz design. The video can be found here: 
