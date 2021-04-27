@@ -164,6 +164,10 @@ body{
     overflow: hidden;
 }
 
+.quizBox .choicesContainer .choice.answered{
+    pointer-events: none;
+}
+
 @keyframes fadeIn{
     0%{
         opacity: 0;
@@ -197,10 +201,6 @@ body{
 
 .quizBox .btn{
     margin:15px 0;
-}
-
-.quizBox .choicesContainer .choice.answered{
-    pointer-events: none;
 }
 
 .scoreBox{

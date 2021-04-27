@@ -82,7 +82,7 @@ document.getElementById("beginBtn").addEventListener("click", function beginBtn(
 }
 );
 
-function startQuiz(){
+function startQuiz() {
     scoreBox.classList.add("hide");
     hsBox.classList.add("hide");
     quizBox.classList.remove("hide");
@@ -158,17 +158,25 @@ function getResult(choiceEl) {
         choiceEl.classList.add("correct");
         correctAnswers++;
 
-        // Else statement to subtract 10 seconds from timer when wrong answer chosen
-    } else {
+        // Else if statement to subtract 10 seconds from timer when wrong answer chosen
+    } 
+    else if (id ==! currentQuestion.answer) {
         console.log("incorrect");
         choiceEl.classList.add("incorrect");
         attempted++;
         quizTimer = timeLeft - 10;
-    }
+
+        var choiceLength = choicesContainer.children.length;
+        for (var i = 0; i < choiceLength; i++) {
+            if (parseInt(choicesContainer.children[i].id) === currentQuestion.answer) {
+                choicesContainer.children[i].classList.add("correct")
+            }
+        }
+    } 
     oneChoice();
 }
 
-// This function will make all other choices unclickable ater the user has selected an answer
+// This function will make all other choices unclickable after the user has selected an answer
 function oneChoice() {
     var choiceLength = choicesContainer.children.length;
     for (var i = 0; i < choiceLength; i++) {
@@ -207,17 +215,17 @@ function restart() {
 }
 
 // This function will allow the user to go to the main quiz page without refreshing the page
-function home(){
+function home() {
     scoreBox.classList.add("hide");
     quizBox.classList.add("hide");
     hsBox.classList.add("hide");
-    instructBox .classList.remove("hide");
+    instructBox.classList.remove("hide");
     resetQuiz();
 }
 
 // Commented out below due to code not working as intended. Will circle back at a later date.
 // The below function will pull user quiz data into score table 
-function quizResult(){
+function quizResult() {
     scoreBox.querySelector(".totalQuestion").innerHTML = quiz.length;
     scoreBox.querySelector(".totalAttempt").innerHTML = attempted;
     scoreBox.querySelector(".totalRight").innerHTML = correctAnswers;
