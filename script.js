@@ -161,6 +161,7 @@ function getResult(choiceEl) {
         // Else statement to subtract 10 seconds from timer when wrong answer chosen
     } else {
         console.log("incorrect");
+        choiceEl.classList.add("incorrect");
         attempted++;
         quizTimer = timeLeft - 10;
     }

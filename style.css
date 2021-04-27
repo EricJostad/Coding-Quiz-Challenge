@@ -180,7 +180,18 @@ body{
     top:0;
     height: 100%;
     width: 100%;
-    background-color: green;
+    background-color: rgb(19, 180, 19);
+    z-index: -1;
+}
+
+.quizBox .choicesContainer .choice.incorrect::before{
+    content: '';
+    position: absolute;
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(219, 18, 18);
     z-index: -1;
 }
 
