@@ -155,6 +155,7 @@ function getResult(choiceEl) {
     // The function compares the id of the clicked choice to the answer key in the quiz array    
     if (id === currentQuestion.answer) {
         console.log("correct");
+        choiceEl.classList.add("correct");
         correctAnswers++;
 
         // Else statement to subtract 10 seconds from timer when wrong answer chosen
