@@ -158,6 +158,17 @@ body{
     margin-bottom: 10px;
     cursor: pointer;
     text-transform: capitalize;
+    animation: fadeIn 0.2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .quizBox .btn{
