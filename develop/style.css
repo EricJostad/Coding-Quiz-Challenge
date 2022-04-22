@@ -1,18 +1,18 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     outline: none;
 }
 
-body{
+body {
     margin: 0;
     font-size: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: lightgray;
 }
 
-.timerBox{
+.timerBox {
     max-width: 200px;
     background-color: gray;
     margin: 25px auto;
@@ -27,11 +27,11 @@ body{
     line-height: 20px;
 }
 
-.timerBox.hide{
+.timerBox.hide {
     display: none;
 }
 
-.customBox{
+.customBox {
     max-width: 650px;
     background-color: gray;
     margin: 100px auto;
@@ -41,17 +41,17 @@ body{
 }
 
 .customBox::before,
-.customBox::after{
+.customBox::after {
     content: "";
     clear: both;
     display: table;
 }
 
-.customBox.hide{
+.customBox.hide {
     display: none;
 }
 
-.instructionsBox h2{
+.instructionsBox h2 {
     font-size: 25px;
     color: black;
     font-weight: 500;
@@ -59,7 +59,7 @@ body{
     line-height: 25px;
 }
 
-.instructionsBox h3{
+.instructionsBox h3 {
     font-size: 20px;
     color: black;
     font-weight: 400;
@@ -67,7 +67,7 @@ body{
     line-height: 25px;
 }
 
-.instructionsBox p{
+.instructionsBox p {
     font-size: 18px;
     color: black;
     font-weight: 350;
@@ -75,15 +75,15 @@ body{
     line-height: 25px;
 }
 
-.instructionsBox p span{
+.instructionsBox p span {
     font-weight: 500;
 }
 
-.instructionsBox .btn{
+.instructionsBox .btn {
     margin-top: 20px;
 }
 
-.btn{
+.btn {
     padding: 15px 45px;
     background-color: lightgray;
     color: black;
@@ -94,32 +94,32 @@ body{
     display: inline-block;
 }
 
-.hsBox{
+.hsBox {
     text-align: center;
 }
 
-.hsBox.hide{
+.hsBox.hide {
     display: none;
 }
 
-.hsBox h1{
+.hsBox h1 {
     font-size: 36px;
     line-height: 42px;
     color: black;
 }
 
-.hsBox table{
+.hsBox table {
     width: 100%;
     border-collapse: collapse;
     margin: 30px 0;
 }
 
-.hsBox table td{
+.hsBox table td {
     border: 1px solid black;
     padding: 8px 15px;
     font-weight: 500;
     color: white;
-    width: 50%; 
+    width: 50%;
     text-align: left;
     font-size: 20px;
 }
@@ -127,12 +127,12 @@ body{
 .quizBox .questionNumber,
 .quizBox .questionText,
 .quizBox .choicesContainer,
-.quizBox .nextButton{
+.quizBox .nextButton {
     width: 100%;
     float: left;
 }
 
-.quizBox .questionNumber{
+.quizBox .questionNumber {
     font-size: 18px;
     color: black;
     font-weight: 600;
@@ -140,7 +140,8 @@ body{
     padding-bottom: 10px;
     line-height: 25px;
 }
-.quizBox .questionText{
+
+.quizBox .questionText {
     font-size: 24px;
     color: black;
     line-height: 30px;
@@ -148,7 +149,7 @@ body{
     padding: 20px 0;
 }
 
-.quizBox .choicesContainer .choice{
+.quizBox .choicesContainer .choice {
     background-color: darkgray;
     padding: 15px;
     font-size: 16px;
@@ -164,80 +165,81 @@ body{
     overflow: hidden;
 }
 
-.quizBox .choicesContainer .choice.answered{
+.quizBox .choicesContainer .choice.answered {
     pointer-events: none;
 }
 
-@keyframes fadeIn{
-    0%{
+@keyframes fadeIn {
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
 
-.quizBox .choicesContainer .choice.correct::before{
+.quizBox .choicesContainer .choice.correct::before {
     content: '';
     position: absolute;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     height: 100%;
     width: 100%;
     background-color: rgb(19, 180, 19);
     z-index: -1;
 }
 
-.quizBox .choicesContainer .choice.incorrect::before{
+.quizBox .choicesContainer .choice.incorrect::before {
     content: '';
     position: absolute;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     height: 100%;
     width: 100%;
     background-color: rgb(219, 18, 18);
     z-index: -1;
 }
 
-.quizBox .btn{
-    margin:15px 0;
+.quizBox .btn {
+    margin: 15px 0;
 }
 
-.scoreBox{
+.scoreBox {
     text-align: center;
 }
 
-.scoreBox.hide{
+.scoreBox.hide {
     display: none;
 }
 
-.scoreBox h1{
+.scoreBox h1 {
     font-size: 36px;
     line-height: 42px;
     color: black;
 }
 
-.scoreBox table{
+.scoreBox table {
     width: 100%;
     border-collapse: collapse;
     margin: 30px 0;
 }
 
-.scoreBox table td{
+.scoreBox table td {
     border: 1px solid black;
     padding: 8px 15px;
     font-weight: 500;
     color: white;
-    width: 50%; 
+    width: 50%;
     text-align: left;
     font-size: 20px;
 }
 
-.scoreBox .btn{
+.scoreBox .btn {
     margin-right: 25px;
 }
 
-.header{
+.header {
     padding: 10px;
     left: 0;
     top: 0;
@@ -247,7 +249,7 @@ body{
     background-color: darkgray;
 }
 
-.footer{
+.footer {
     padding: 5px;
     left: 0;
     bottom: 0;
