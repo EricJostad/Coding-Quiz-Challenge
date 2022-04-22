@@ -31,7 +31,6 @@ This project is created with:
 - Locate and vaporize bug(s) that are/is preventing the user from reliably reaching the Results page at the end of the quiz; current status is intermittent functionality. 
 - Locate and obliterate bug(s) that are/is preventing the incorrect anwers from reliably turning red and console logging "incorrect" when chosen; current status is intermittent functionality.
 - Create code to allow the user to save their score and then append that score to the High Scores area using local storage. 
-- Update directory organization. 
 
 ## Outside resources
 This project was used with the knowledge gained from my boot camp, my previous assignments, and a helpful YouTube guid for the overall quiz design. The video can be found here: 
