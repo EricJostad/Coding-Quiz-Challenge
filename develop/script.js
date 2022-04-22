@@ -159,8 +159,8 @@ function getResult(choiceEl) {
         correctAnswers++;
 
         // Else if statement to subtract 10 seconds from timer when wrong answer chosen
-    } 
-    else if (id ==! currentQuestion.answer) {
+    }
+    else if (id == !currentQuestion.answer) {
         console.log("incorrect");
         choiceEl.classList.add("incorrect");
         attempted++;
@@ -172,7 +172,7 @@ function getResult(choiceEl) {
                 choicesContainer.children[i].classList.add("correct")
             }
         }
-    } 
+    }
     oneChoice();
 }
 
