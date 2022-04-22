@@ -210,6 +210,7 @@ function resetQuiz() {
 function restart() {
     scoreBox.classList.add("hide");
     quizBox.classList.remove("hide");
+    timerBox.classList.remove("hide");
     resetQuiz();
     startQuiz();
 }
