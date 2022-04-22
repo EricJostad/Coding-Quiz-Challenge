@@ -47,11 +47,6 @@ let quiz = [
     },
 ]
 
-// This line allows the countdown timer to initiate when the user clicks the Begin Quiz button
-beginButton.onclick = () => {
-    quizTimer();
-}
-
 // This function allows the countdown timer to start at a set time and decrement 1 every second until 0, then will display "Time's Up!"
 function quizTimer() {
     let timeLeft = 60;
@@ -65,6 +60,11 @@ function quizTimer() {
             clearInterval(timeInterval);
         }
     }, 1000);
+}
+
+// This line allows the countdown timer to initiate when the user clicks the Begin Quiz button
+beginButton.onclick = () => {
+    quizTimer();
 }
 
 // This function is responsible for hiding the instructionsBox and showing the quizBox/Timer when the user clicks on begin Quiz
