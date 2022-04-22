@@ -1,25 +1,25 @@
 // Gathering elements that will be needed 
-var questionNumber = document.querySelector(".questionNumber");
-var questionText = document.querySelector(".questionText");
-var choicesContainer = document.querySelector(".choicesContainer");
-var beginButton = document.querySelector("#beginBtn");
-var timerEl = document.querySelector("#countdown");
-var instructBox = document.querySelector(".instructionsBox");
-var hsBox = document.querySelector(".hsBox");
-var quizBox = document.querySelector(".quizBox");
-var scoreBox = document.querySelector(".scoreBox");
-var timerBox = document.querySelector(".timerBox");
+let questionNumber = document.querySelector(".questionNumber");
+let questionText = document.querySelector(".questionText");
+let choicesContainer = document.querySelector(".choicesContainer");
+let beginButton = document.querySelector("#beginBtn");
+let timerEl = document.querySelector("#countdown");
+let instructBox = document.querySelector(".instructionsBox");
+let hsBox = document.querySelector(".hsBox");
+let quizBox = document.querySelector(".quizBox");
+let scoreBox = document.querySelector(".scoreBox");
+let timerBox = document.querySelector(".timerBox");
 
 // Declaring variables that will be used further down in script
-var questionCounter = 0;
-var correctAnswers = 0;
-var attempted = 0;
-var currentQuestion;
-var availableQuestions = [];
-var availableChoices = [];
+let questionCounter = 0;
+let correctAnswers = 0;
+let attempted = 0;
+let currentQuestion;
+let availableQuestions = [];
+let availableChoices = [];
 
 // Array of Quiz Questions
-var quiz = [
+let quiz = [
     {
         question: "Which of the following is not a common web development programming language?",
         choices: ["HTML", "Mjolnir", "JavaScript", "CSS"],
@@ -37,7 +37,7 @@ var quiz = [
     },
     {
         question: "Which of the following is an example of an Array structure?",
-        choices: ["var = {}", "var = ()", "var = []", "var = ||"],
+        choices: ["let = {}", "let = ()", "let = []", "let = ||"],
         answer: 2
     },
     {
@@ -54,8 +54,8 @@ beginButton.onclick = () => {
 
 // This function allows the countdown timer to start at a set time and decrement 1 every second until 0, then will display "Time's Up!"
 function quizTimer() {
-    var timeLeft = 60;
-    var timeInterval = setInterval(function () {
+    let timeLeft = 60;
+    let timeInterval = setInterval(function () {
         timerEl.textContent = timeLeft + " seconds remain";
         timeLeft--;
 
@@ -93,8 +93,8 @@ function startQuiz() {
 
 // This will push the questions into the AvailableQuestions array
 function setAvailableQuestions() {
-    var totalQuestion = quiz.length;
-    for (var i = 0; i < totalQuestion; i++) {
+    let totalQuestion = quiz.length;
+    for (let i = 0; i < totalQuestion; i++) {
         availableQuestions.push(quiz[i])
     }
 }
@@ -105,22 +105,22 @@ function getNewQuestion() {
     questionNumber.innerHTML = "Question " + (questionCounter + 1) + " of " + quiz.length;
 
     // This line will set the question text and grab a random question
-    var questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
+    let questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
     currentQuestion = questionIndex;
     questionText.innerHTML = currentQuestion.question;
 
     // This line will get the position of "questionIndex" from the availableQuestions array
-    var index1 = availableQuestions.indexOf(questionIndex);
+    let index1 = availableQuestions.indexOf(questionIndex);
 
     // This will be responsible for removing "questionIndex" from the availableQuestion Array
     // to avoid repeating questions
     availableQuestions.splice(index1, 1);
 
     // This line will set & get the length of answer choices
-    var choiceLength = currentQuestion.choices.length
+    let choiceLength = currentQuestion.choices.length
 
     // This will push answer choices into the availableChoices Array
-    for (var i = 0; i < choiceLength; i++) {
+    for (let i = 0; i < choiceLength; i++) {
         availableChoices.push(i)
     }
 
@@ -128,17 +128,17 @@ function getNewQuestion() {
     choicesContainer.innerHTML = "";
 
     // Append choices from quiz array of objects to html
-    for (var i = 0; i < choiceLength; i++) {
+    for (let i = 0; i < choiceLength; i++) {
 
         // Will get a random choice and get the positions of choiceIndex from availableOptions
-        var choiceIndex = availableChoices[Math.floor(Math.random() * availableChoices.length)]
-        var index2 = availableChoices.indexOf(choiceIndex);
+        let choiceIndex = availableChoices[Math.floor(Math.random() * availableChoices.length)]
+        let index2 = availableChoices.indexOf(choiceIndex);
 
         // This will be responsible for removing "choiceIndex" from the availableChoices
         // so that the choice does not repeat 
         availableChoices.splice(index2, 1);
 
-        var choice = document.createElement("div");
+        let choice = document.createElement("div");
         choice.innerHTML = currentQuestion.choices[choiceIndex];
         choice.id = choiceIndex;
         choice.className = "choice";
@@ -150,7 +150,7 @@ function getNewQuestion() {
 }
 // This function is responsible for marking the answer as correct or incorrect
 function getResult(choiceEl) {
-    var id = parseInt(choiceEl.id);
+    let id = parseInt(choiceEl.id);
 
     // The function compares the id of the clicked choice to the answer key in the quiz array    
     if (id === currentQuestion.answer) {
@@ -166,8 +166,8 @@ function getResult(choiceEl) {
         attempted++;
         quizTimer = timeLeft - 10;
 
-        var choiceLength = choicesContainer.children.length;
-        for (var i = 0; i < choiceLength; i++) {
+        let choiceLength = choicesContainer.children.length;
+        for (let i = 0; i < choiceLength; i++) {
             if (parseInt(choicesContainer.children[i].id) === currentQuestion.answer) {
                 choicesContainer.children[i].classList.add("correct")
             }
@@ -178,8 +178,8 @@ function getResult(choiceEl) {
 
 // This function will make all other choices unclickable after the user has selected an answer
 function oneChoice() {
-    var choiceLength = choicesContainer.children.length;
-    for (var i = 0; i < choiceLength; i++) {
+    let choiceLength = choicesContainer.children.length;
+    for (let i = 0; i < choiceLength; i++) {
         choicesContainer.children[i].classList.add("answered");
     }
 }
