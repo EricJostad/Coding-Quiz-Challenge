@@ -25,7 +25,7 @@ This project is created with:
 - [Javascript](https://www.javascript.com/)
 
 ## Updates planned / Known issues
-- Locate bugs and squash bug(s) that is/are preventing the timeLeft function from correctly deprecating the time left by 10 seconds for every wrong answer. 
+- Locate bugs and squash bug(s) that is/are preventing the timeLeft function from correctly deprecating the time left by 10 seconds for every wrong answer(in progress). 
 - Locate bugs and destroy bug(s) that is/are preventing the user score from caculating. 
 - Locate and smash bug(s) that are/is preventing the user from being able to peruse through the quiz when the user decides to start the quiz over after hitting the "Home" button on the results page. 
 - Locate and vaporize bug(s) that are/is preventing the user from reliably reaching the Results page at the end of the quiz; current status is intermittent functionality. 
